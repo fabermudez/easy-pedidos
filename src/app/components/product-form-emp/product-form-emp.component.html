@@ -1,0 +1,37 @@
+
+<div class="row"> 
+    <div class="col-md-5" >
+<div class="card card-body">
+    <h1>Gestion Empresa</h1>
+    <a [routerLink] = "['/Empresas']" class="btn btn-danger btn-block">regresar</a>
+<hr>
+<form (ngSubmit)="addProductsEmp()">
+
+    <div class="form-group">
+        <input type="text"  name="Nombre" [(ngModel)] = "productEmp.Nombre" class="form-control" placeholder="Nombre">
+    </div>
+
+    <div class="form-group">
+        <input type="text"  name="Fecha_publicacion" [(ngModel)] = "productEmp.Fecha_publicacion 
+        "class="form-control" placeholder="Fecha de publicación">
+    </div>
+
+    <div class="form-group">
+        <input type="text"  name="Empresa" [(ngModel)] = "productEmp.Empresa" class="form-control" placeholder="Empresa"> 
+    </div>
+
+    <div class="form-group">
+        <input type="text"  name="Descripcion" [(ngModel)] = "productEmp.Descripcion" class="form-control" placeholder="Descripción">
+    </div>
+
+    <button type="submit" class="btn btn-success btn-block">
+        Guardar
+    </button>
+</form>
+</div> 
+</div>
+<div class="col-md-7">
+    <app-gestionar-empresas>
+    </app-gestionar-empresas>
+</div>
+</div>

@@ -1,0 +1,41 @@
+
+<div class="boton">
+  <h1 class="animated fadeIn fast">TUS EMPRESAS FAVORITAS</h1> 
+</div>
+<hr>
+
+
+<div class="card-columns"> 
+    <div class="card animated fadeIn fasts" *ngFor="let empresa of empresas;let i = index">
+      <div class="imgOfert">
+        <img class="card-img-top img-fluid" [src]="empresa.img"  alt="empresa.nombre">  
+      </div>  
+        <div class="card-block">
+          <h4 class="card-title" class="nombre_empresa">{{empresa.nombre}}</h4 >
+          <p class="card-text">{{empresa.bio}}</p>
+          <button  id="dos" type="button" class="btn btn-success" [routerLink]="['/Agregare',i]">Agregar</button>
+          <button  id="dos" type="button" class="btn btn-primary" [routerLink]="['/Editare',i]">Editar</button>          
+          <button id="dos" type="button" class="btn btn-danger" [routerLink]="['/Eliminare',i]">Eliminar</button>
+          <p class="card-text"><small class="text-muted">{{empresa.aparicion}}</small></p>
+        </div>
+      </div>
+      <a [routerLink] = "['/Ofertas']" class="btn btn-danger btn-block">regresar</a>
+</div>
+
+<!--añadir empresas-->
+
+<div class="card-columns"> 
+  <div class="card animated fadeIn fasts" *ngFor="let empresa of productsEmp;let i = index">
+    <div class="imgOfert">
+      <img class="card-img-top img-fluid" [src]="empresa.img"  alt="empresa.nombre">  
+    </div>  
+      <div class="card-block">
+        <h4 class="card-title" class="nombre_empresa">{{empresa.Nombre}}</h4 >
+        <p class="card-text">{{empresa.Descripcion}}</p>
+        <button  id="dos" type="button" class="btn btn-success" [routerLink]="['/Agregare',i]">Agregar</button>
+        <button  id="dos" type="button" class="btn btn-primary" [routerLink]="['/Editare',i]">Editar</button>          
+        <button id="dos" type="button" class="btn btn-danger" [routerLink]="['/Eliminare',i]">Eliminar</button>
+        <p class="card-text"><small class="text-muted">{{empresa.Fecha_publicacion}}</small></p>
+      </div>
+    </div>
+</div>

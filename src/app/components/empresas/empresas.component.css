@@ -1,0 +1,22 @@
+.imgOfert{
+    width: 80%;
+    height: 250px;
+    margin-top:5%;    
+}
+.imgOfert img{
+height: 100%;
+margin-left: 15%;
+}
+.nombre_empresa{
+    text-align: center;
+}
+.boton{
+    margin-left:1%;
+    display:inline-flex;
+}
+.boton button{
+    margin-left:50px;
+}
+#dos{
+    margin-left:1%;
+}

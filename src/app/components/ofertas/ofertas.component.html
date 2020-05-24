@@ -1,0 +1,48 @@
+<div class="boton">
+  <h1 class="animated fadeIn fast">Ofertas <small>de tus mejores empresas</small></h1>
+</div>
+<hr>
+
+
+<div class="card-columns">
+    <div class="card animated fadeIn fasts" *ngFor="let oferta of ofertas;let i = index">
+      <div class="imgOfert">
+        <img class="card-img-top img-fluid" [src]="oferta.img"  alt="oferta.nombre">  
+      </div>  
+        <div class="card-block">
+          <h4 class="card-title" class="nombre_oferta">{{oferta.nombre}}</h4 >
+          <p class="card-text">{{oferta.bio}}</p>
+          <button  id="dos" type="button" class="btn btn-success" [routerLink]="['/Agregar',i]">Agregar</button>
+          <button  id="dos" type="button" class="btn btn-primary" [routerLink]="['/Editar',i]">Editar</button>          
+          <button id="dos" type="button" class="btn btn-danger" [routerLink]="['/Eliminar',i]">Eliminar</button>
+          <p class="card-text"><small class="text-muted">{{oferta.aparicion}}</small></p>
+        <!-- <button type="button" class="btn btn-outline-primary btn-block">
+            ver más...
+        </button> -->
+        <a [routerLink]="['/Oferta',i]" class="btn btn-outline-primary btn-block">ver más...</a>
+
+        </div>
+      </div>
+</div>
+<!--nuevas ofertas-->
+<div class="card-columns">
+  <div class="card animated fadeIn fasts" *ngFor="let oferta of products;let i = index">
+    <div class="imgOfert">
+      <img class="card-img-top img-fluid" [src]="oferta.img"  alt="oferta.nombre">  
+    </div>  
+      <div class="card-block">
+        <h4 class="card-title" class="nombre_oferta">{{oferta.Nombre}}</h4 >
+        <p class="card-text">{{oferta.Descripcion}}</p>
+        <button  id="dos" type="button" class="btn btn-success" [routerLink]="['/Agregar',i]">Agregar</button>
+        <button  id="dos" type="button" class="btn btn-primary" [routerLink]="['/Editar',i]">Editar</button>          
+        <button id="dos" type="button" class="btn btn-danger" [routerLink]="['/Eliminar',i]">Eliminar</button>
+        <p class="card-text"><small class="text-muted">{{oferta.Fecha_publicacion}}</small></p>
+      <!-- <button type="button" class="btn btn-outline-primary btn-block">
+          ver más...
+      </button> -->
+      <a [routerLink]="['/Oferta',i]" class="btn btn-outline-primary btn-block">ver más...</a>
+
+      </div>
+    </div>
+</div>
+
